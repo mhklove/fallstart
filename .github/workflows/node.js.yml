@@ -27,10 +27,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install dependencies
-    - name: run lint
-      run: lint . --ext .js
+    
       
-   
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mhklove/eslint-action@1.0.2
+        with:
+          files: src/ 
         
    
     

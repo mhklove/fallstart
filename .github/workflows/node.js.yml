@@ -33,7 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: fallstart/eslint-action@1.0.2
+      - name: Use local my-action
+      - uses: ./.github/action/my-action
         with:
           files: src/ 
         

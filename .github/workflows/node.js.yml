@@ -27,9 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install dependencies
-    - run: start
-    - run: build
-    - run: test
-    - run: eject
-    - run: lint
-    - run: prettier
+    - run: npm lint
+    - run: npm prettier
+    - run: npm test
+    - run: npm build
